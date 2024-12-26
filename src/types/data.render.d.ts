@@ -9,11 +9,17 @@ declare global {
     imgClassName?: string;
     img?: string;
     bgImage?: string;
-    titleClasName?: string;
+    titleClassName?: string;
   }
   interface NavItem {
     name: string;
     link: string;
     icon: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
+  }
+  interface TestimonialItem {
+    quote: string;
+    name: string;
+    designation: string;
+    src: string;
   }
 }
