@@ -1,13 +1,12 @@
+import AboutMe from "@/components/AboutMe";
 import DarkLightMode from "@/components/DarkLightMode";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import NavbarFloating from "@/components/NavbarFloating";
 import PinProjects from "@/components/PinProjects";
-import { AnimatedTestimonials } from "@/components/ui/AnimatedTestimonial";
-import { BackgroundGradientAnimation } from "@/components/ui/GradientBackGround";
+import { World } from "@/components/ui/GridGlobe";
 import Href from "@/components/ui/Href";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
-import { testimonials } from "@/data";
 import { FaLocationArrow } from "react-icons/fa6";
 
 export default function Home() {
@@ -23,7 +22,7 @@ export default function Home() {
           <div className="z-[99] w-[80vw] flex-col inset-0 flex items-center justify-center gap-3 text-white font-bold px-4  text-3xl text-center md:text-4xl lg:text-7xl">
             <div className="max-w-[89vw]">
               <h2 className="uppercase tracking-widest text-[8px] md:text-xs  text-center text-dark dark:text-blue-100 max-w-[80vw]">
-                Hi, I&aspo;m Dinh Thai Nguyen. Talented Frontend Developer
+                Hi, I&#39;m Dinh Thai Nguyen. Talented Frontend Developer
                 <span className="text-blue-500 dark:text-purple-400">
                   (at least in my thought :)) )
                 </span>
@@ -49,9 +48,33 @@ export default function Home() {
           </div>
         </div>
         <Grid />
-        <AnimatedTestimonials testimonials={testimonials} />
-        <BackgroundGradientAnimation></BackgroundGradientAnimation>
+        <AboutMe />
         <PinProjects />
+        <World
+          globeConfig={{
+            pointSize: undefined,
+            globeColor: undefined,
+            showAtmosphere: undefined,
+            atmosphereColor: undefined,
+            atmosphereAltitude: undefined,
+            emissive: undefined,
+            emissiveIntensity: undefined,
+            shininess: undefined,
+            polygonColor: undefined,
+            ambientLight: undefined,
+            directionalLeftLight: undefined,
+            directionalTopLight: undefined,
+            pointLight: undefined,
+            arcTime: undefined,
+            arcLength: undefined,
+            rings: undefined,
+            maxRings: undefined,
+            initialPosition: undefined,
+            autoRotate: undefined,
+            autoRotateSpeed: undefined,
+          }}
+          data={[]}
+        />
       </div>
     </main>
   );

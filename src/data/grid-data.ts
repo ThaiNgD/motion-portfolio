@@ -1,4 +1,4 @@
-import Skeleton from "@/components/ui/GridSkeleton";
+import spareImg1 from "@/assets/bg_img_1.jpg";
 import {
   IconArrowWaveRightUp,
   IconBoxAlignTopLeft,
@@ -7,43 +7,49 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
-
 export const grid_items: GridItem[] = [
   {
     title: "Hobby",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: Skeleton,
+    description:
+      "Design the invisible, code the impossible, and create experiences that users never forget",
+    // header: Skeleton,
     icon: IconClipboardCopy,
+    img: spareImg1,
   },
   {
     title: "Experience",
     description: "Dive into the transformative power of technology.",
-    header: Skeleton,
+    // header: Skeleton,
     icon: IconFileBroken,
+    // spareImg: spareImg1,
   },
   {
     title: "Education",
     description: "Discover the beauty of thoughtful and functional design.",
-    header: Skeleton,
+    // header: Skeleton,
     icon: IconSignature,
+    // spareImg: spareImg1,
   },
   {
     title: "About Me",
     description: "Experience the thrill of bringing ideas to life.",
-    header: Skeleton,
+    // header: Skeleton,
     icon: IconBoxAlignTopLeft,
+    // spareImg: spareImg1,
   },
   {
     title: "Skill",
     description:
       "Understand the impact of effective communication in our lives.",
-    header: Skeleton,
+    // header: Skeleton,
     icon: IconTableColumn,
+    spareImg: spareImg1,
   },
   {
     title: "Project",
     description: "Join the quest for understanding and enlightenment.",
-    header: Skeleton,
+    // header: Skeleton,
     icon: IconArrowWaveRightUp,
+    // spareImg: spareImg1,
   },
 ];

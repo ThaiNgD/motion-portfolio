@@ -4,10 +4,11 @@ import { BentoGridItem } from "./ui/BentoGridItem";
 
 const Grid = () => {
   return (
-    <section id="about" className="dark:bg-black  bg-white">
+    <section id="contact" className="dark:bg-black h-fit bg-white">
       <BentoGrid className="max-w-6xl h-fit p-2 mx-auto">
         {grid_items.map((item, i, row) => (
           <BentoGridItem
+            id={i}
             key={i}
             title={item.title}
             description={item.description}
@@ -21,6 +22,8 @@ const Grid = () => {
                 : "md:col-span-3 col-span-1"
             }
             img={item.img}
+            spareImg={item.spareImg}
+            spareImgClassName={item.spareImgClassName}
             imgClassName={item.imgClassName}
             bgImage={item.bgImage}
             titleClassName={item.titleClassName}

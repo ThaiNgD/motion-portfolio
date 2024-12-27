@@ -1,37 +1,42 @@
+import Family from "@/assets/family.jpg";
+import Food from "@/assets/food.jpg";
+import Football from "@/assets/football.jpg";
+import Pet from "@/assets/pet.jpg";
+import Travel from "@/assets/travel.jpg";
 export const testimonials: TestimonialItem[] = [
   {
     quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Where my soul resides, I nurture it and strive to make it more beautiful with time. I hope it lasts until the very end.",
+    name: "Family",
+    designation: "The most important thing",
+    src: Family,
   },
   {
     quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "I live my truth and let go of negative feelings when running. Moreover, I believe I can play professionally with proper training.",
+    name: "Football",
+    designation: "Favorite sport",
+    src: Football,
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Traveling is one of my hobbies, and I dream of exploring the entire world if I can afford it. That's why coding is so important to me.",
+    name: "Travel",
+    designation: "Life is short, take all the places !!!",
+    src: Travel,
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
-    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "They are so cute! The big one is Mun, and the small one is Min. They're always making a mess, but they never upset me.",
+    name: "Pet",
+    designation: "Dog is my favorite animalll",
+    src: Pet,
   },
   {
     quote:
-      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Foodboy is a lively, creative character who loves experimenting with food and turning cooking into a fun adventure. Dressed in colorful, culinary-themed attire, he spreads joy and inspires others to find magic in the kitchen.",
+    name: "Food",
+    designation: "GD: I'm the food boy",
+    src: Food,
   },
 ];
