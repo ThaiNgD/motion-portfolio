@@ -3,10 +3,10 @@ import { ReactNode } from "react";
 const Provider = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider
-      enableSystem
-      disableTransitionOnChange
       attribute={"class"}
       defaultTheme="dark"
+      enableSystem
+      disableTransitionOnChange
     >
       {children}
     </ThemeProvider>
