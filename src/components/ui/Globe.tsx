@@ -1,21 +1,23 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable */
 "use client";
 import countries from "@/data/globe.json";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, extend, Object3DNode, useThree } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
-import { Color, Fog, PerspectiveCamera, Scene } from "three";
+import { Color, Fog, PerspectiveCamera, Scene, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
   }
 }
+
 extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
 const cameraZ = 300;
+
 let numbersOfRings = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
@@ -73,7 +75,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   const _buildData = () => {
     const arcs = data;
-    const points = [];
+    let points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
@@ -116,7 +118,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
         .hexPolygonColor((e) => {
-          console.log(e);
           return defaultProps.polygonColor;
         });
       startAnimation();
@@ -132,22 +133,17 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
       .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      // eslint-disabled-next-line @typescript-eslint/no-explicit-any
       .arcColor((e: any) => (e as { color: string }).color)
       .arcAltitude((e) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
       .arcStroke((e) => {
-        console.log(e);
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
       .arcDashLength(defaultProps.arcLength)
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime((e) => {
-        console.log(e);
-        return defaultProps.arcTime;
-      });
+      .arcDashAnimateTime((e) => defaultProps.arcTime);
 
     globeRef.current
       .pointsData(data)
@@ -187,7 +183,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     };
   }, [globeRef.current, globeData]);
 
-  return <>{/* <threeGlobe ref={globeRef} /> */}</>;
+  return <threeGlobe ref={globeRef} />;
 }
 
 export function WebGLRendererConfig() {
@@ -204,13 +200,12 @@ export function WebGLRendererConfig() {
 
 export function World(props: WorldProps) {
   const { globeConfig } = props;
-  console.log(globeConfig);
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
   return (
     <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
       <WebGLRendererConfig />
-      {/* <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
+      <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
         color={globeConfig.directionalLeftLight}
         position={new Vector3(-400, 100, 400)}
@@ -223,7 +218,7 @@ export function World(props: WorldProps) {
         color={globeConfig.pointLight}
         position={new Vector3(-200, 500, 200)}
         intensity={0.8}
-      /> */}
+      />
       <Globe {...props} />
       <OrbitControls
         enablePan={false}

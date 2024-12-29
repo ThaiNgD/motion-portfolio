@@ -17,15 +17,14 @@ export const grid_items: GridItem[] = [
     img: spareImg1,
   },
   {
-    title: "Experience",
-    description: "Dive into the transformative power of technology.",
+    title: "I'm very flexible with timezone communications",
     // header: Skeleton,
     icon: IconFileBroken,
     // spareImg: spareImg1,
   },
   {
-    title: "Education",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "My tech stack",
+    description: "I constantly try to improve",
     // header: Skeleton,
     icon: IconSignature,
     // spareImg: spareImg1,
