@@ -1,4 +1,9 @@
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import {
+  IconCapProjecting,
+  IconHome,
+  IconMessage,
+  IconUser,
+} from "@tabler/icons-react";
 
 export const nav_items: NavItem[] = [
   {
@@ -15,5 +20,10 @@ export const nav_items: NavItem[] = [
     name: "Contact",
     link: "#contact",
     icon: IconMessage,
+  },
+  {
+    name: "Project",
+    link: "#project",
+    icon: IconCapProjecting,
   },
 ];

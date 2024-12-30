@@ -3,7 +3,7 @@ import DarkLightMode from "@/components/DarkLightMode";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import NavbarFloating from "@/components/NavbarFloating";
-import PinProjects from "@/components/PinProjects";
+import RecentProjects from "@/components/RecentProjects";
 import Href from "@/components/ui/Href";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -11,6 +11,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 export default function Home() {
   return (
     <main className="relative dark:bg-white bg-black" suppressHydrationWarning>
+      {/* <ClockRealtime /> */}
       <NavbarFloating />
       <DarkLightMode />
       <div className="w-full dark:bg-black dark:bg-grid-white/[0.05] bg-white bg-grid-black/[0.05] md:bg-grid-black/[0.02] relative flex flex-col items-center justify-center">
@@ -47,8 +48,8 @@ export default function Home() {
           </div>
         </div>
         <Grid />
+        <RecentProjects />
         <AboutMe />
-        <PinProjects />
       </div>
     </main>
   );

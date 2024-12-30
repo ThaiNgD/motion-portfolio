@@ -14,7 +14,7 @@ export const BackgroundGradientAnimation = ({
   size = "80%",
   blendingValue = "hard-light",
   children,
-  className,
+  // className,
   interactive = true,
   containerClassName,
 }: {
@@ -89,7 +89,7 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "h-screen relative overflow-hidden !mt-0 top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
       suppressHydrationWarning
@@ -112,7 +112,7 @@ export const BackgroundGradientAnimation = ({
           </filter>
         </defs>
       </svg>
-      <div className={cn("", className)}>{children}</div>
+      <>{children}</>
       <div
         className={cn(
           "gradients-container h-full w-full blur-lg",

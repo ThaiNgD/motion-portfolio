@@ -1,8 +1,14 @@
+"use client";
 import { tech_stack_data } from "@/data";
+import animateData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
+import Lottie from "lottie-react";
 import Image from "next/image";
+import { useState } from "react";
+import { FaRegCopy } from "react-icons/fa6";
 import Globe from "../Globe";
 import { BackgroundGradientAnimation } from "./GradientBackGround";
+import MagicButton from "./MagicButton";
 export const BentoGridItem = ({
   className,
   title,
@@ -15,6 +21,12 @@ export const BentoGridItem = ({
   titleClassName,
   imgClassName,
 }: GridItem & { id: number }) => {
+  const [copied, setCopied] = useState(false);
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText("dinhthai1905@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000);
+  };
   return (
     <div
       className={cn(
@@ -23,7 +35,7 @@ export const BentoGridItem = ({
         id === 0 && "md:row-span-2 md:col-span-2"
       )}
     >
-      <div className={`${id === 5 && "flex justify-center"} h-full`}>
+      <div className={`${id === 3 && "absolute flex justify-center"} h-full`}>
         {img && (
           <Image
             className={cn(
@@ -51,9 +63,24 @@ export const BentoGridItem = ({
           />
         )}
       </div>
-      {id === 5 && (
-        <BackgroundGradientAnimation>
-          <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
+      {id === 3 && (
+        <BackgroundGradientAnimation containerClassName="flex items-center">
+          <div className="mt-5" onClick={handleCopyClick}>
+            <div className={cn("absolute z-50 bottom-5 right-10")}>
+              <Lottie
+                className="z-50 !w-[200px] translate-y-[75px] !h-[200px]"
+                loop={copied}
+                autoPlay={copied}
+                animationData={animateData}
+                rendererSettings={{
+                  preserveAspectRatio: "xMidYMid slice",
+                }}
+              />
+              <div className="relative flex justify-center">
+                <MagicButton content="My Email" icon={FaRegCopy} />
+              </div>
+            </div>
+          </div>
         </BackgroundGradientAnimation>
       )}
       {id === 2 && (
@@ -102,7 +129,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 absolute md:h-full min-h-40 flex flex-col p-5 lg:p-10 px-5"
           )}
         >
-          <div className="font-sans font-extralight  text-[#c1c2d3] text-sm md:text-xs lg:text-base z-50 dark:text-neutral-200 mb-2 mt-2">
+          <div className="font-sans font-base text-[#c1c2d3] text-sm md:text-xs lg:text-base z-50 dark:text-neutral-200 mb-2 mt-2">
             {description}
           </div>
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-50 dark:text-neutral-300">
