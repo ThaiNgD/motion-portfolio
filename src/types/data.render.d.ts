@@ -4,7 +4,6 @@ declare global {
     title: string;
     description?: string;
     header?: () => JSX.Element;
-    icon: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
     className?: string;
     imgClassName?: string;
     img?: string | StaticImport;
@@ -23,5 +22,15 @@ declare global {
     name: string;
     designation: string;
     src: string | StaticImport;
+  }
+  interface ProjectItem {
+    id: number;
+    title: string;
+    description?: string;
+    url: string;
+    image?: string | StaticImport;
+    github?: string;
+    gitlab?: string;
+    stack: string[];
   }
 }

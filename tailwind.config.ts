@@ -133,6 +133,9 @@ export default {
           light: "#e0e6ed",
           dark: "#888ea8",
         },
+        purple: {
+          DEFAULT: "#EE82EE",
+        },
       },
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],

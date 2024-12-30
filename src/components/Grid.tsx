@@ -13,7 +13,6 @@ const Grid = () => {
             title={item.title}
             description={item.description}
             header={item.header}
-            icon={item.icon}
             className={
               !(i + 1 === row.length)
                 ? "lg:col-span-2 col-span-1"
