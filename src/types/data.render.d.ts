@@ -2,7 +2,7 @@ export {};
 declare global {
   interface GridItem {
     title: string;
-    description: string;
+    description?: string;
     header?: () => JSX.Element;
     icon: ForwardRefExoticComponent<IconProps & RefAttributes<Icon>>;
     className?: string;

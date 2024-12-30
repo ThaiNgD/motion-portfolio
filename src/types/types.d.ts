@@ -1,15 +1,5 @@
 export {};
-declare namespace JSX {
-  interface IntrinsicElements {
-    threeGlobe: React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLElement>,
-      HTMLElement
-    >;
-    pointLight: "";
-    directionalLight: "";
-    ambientLight;
-  }
-}
+
 declare global {
   type GlobalPosition = {
     order: number;

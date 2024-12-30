@@ -4,7 +4,6 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import NavbarFloating from "@/components/NavbarFloating";
 import PinProjects from "@/components/PinProjects";
-import { World } from "@/components/ui/GridGlobe";
 import Href from "@/components/ui/Href";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { FaLocationArrow } from "react-icons/fa6";
@@ -50,31 +49,6 @@ export default function Home() {
         <Grid />
         <AboutMe />
         <PinProjects />
-        <World
-          globeConfig={{
-            pointSize: undefined,
-            globeColor: undefined,
-            showAtmosphere: undefined,
-            atmosphereColor: undefined,
-            atmosphereAltitude: undefined,
-            emissive: undefined,
-            emissiveIntensity: undefined,
-            shininess: undefined,
-            polygonColor: undefined,
-            ambientLight: undefined,
-            directionalLeftLight: undefined,
-            directionalTopLight: undefined,
-            pointLight: undefined,
-            arcTime: undefined,
-            arcLength: undefined,
-            rings: undefined,
-            maxRings: undefined,
-            initialPosition: undefined,
-            autoRotate: undefined,
-            autoRotateSpeed: undefined,
-          }}
-          data={[]}
-        />
       </div>
     </main>
   );

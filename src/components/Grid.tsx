@@ -5,7 +5,7 @@ import { BentoGridItem } from "./ui/BentoGridItem";
 const Grid = () => {
   return (
     <section id="contact" className="dark:bg-black h-fit bg-white">
-      <BentoGrid className="max-w-6xl h-fit p-2 mx-auto">
+      <BentoGrid className="max-w-[1200px] h-fit p-2 mx-auto">
         {grid_items.map((item, i, row) => (
           <BentoGridItem
             id={i}
@@ -16,10 +16,8 @@ const Grid = () => {
             icon={item.icon}
             className={
               !(i + 1 === row.length)
-                ? i === 3
-                  ? "md:col-span-2"
-                  : ""
-                : "md:col-span-3 col-span-1"
+                ? "lg:col-span-2 col-span-1"
+                : "md:col-span-4 col-span-1 !mt-0"
             }
             img={item.img}
             spareImg={item.spareImg}
