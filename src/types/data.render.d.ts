@@ -1,4 +1,5 @@
 export {};
+import { stack_icon } from "@/data";
 declare global {
   interface GridItem {
     title: string;
@@ -31,6 +32,6 @@ declare global {
     image?: string | StaticImport;
     github?: string;
     gitlab?: string;
-    stack: string[];
+    stack: (keyof typeof stack_icon)[];
   }
 }

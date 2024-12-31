@@ -11,7 +11,7 @@ export const project_data: ProjectItem[] = [
     image: TekyPage,
     gitlab: "https://gitlab.com/teky.vn/tekyversion3htmlcssjs",
     url: "https://teky.edu.vn/",
-    stack: ["React", "TypeScript"],
+    stack: ["django", "postgre", "bootstrap"],
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const project_data: ProjectItem[] = [
     image: ContentAI,
     github: "https://github.com/MKT-SOFTWARE/CONTENT_AI_FE",
     url: "https://nextjs-tutorial-six-liart.vercel.app/",
-    stack: ["NextJS", "TypeScript", "NestJS", "PostgreSQL"],
+    stack: ["next", "typescript", "nestjs", "mysql", "tailwind"],
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ export const project_data: ProjectItem[] = [
     image: MKTSystem,
     github: "",
     url: "https://phanmemmkt.vn/phan-mem-mkt-client",
-    stack: ["React", "TypeScript"],
+    stack: ["react", "typescript", "sqlite", "electronjs", "tailwind"],
   },
   {
     id: 4,
@@ -40,6 +40,6 @@ export const project_data: ProjectItem[] = [
     image: ChatApp,
     github: "",
     url: "https://mern-l32m.onrender.com/login",
-    stack: ["React", "TypeScript"],
+    stack: ["react", "typescript", "bootstrap", "express"],
   },
 ];
