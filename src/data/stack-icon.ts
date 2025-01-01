@@ -1,29 +1,29 @@
-import { IconType } from "react-icons";
-import { FaReact } from "react-icons/fa6";
-import { RiTailwindCssFill } from "react-icons/ri";
 import {
-  SiBootstrap,
-  SiDjango,
-  SiElectron,
-  SiExpress,
-  SiMysql,
-  SiNestjs,
-  SiNextdotjs,
-  SiPostgresql,
-  SiSqlite,
-  SiTypescript,
-} from "react-icons/si";
-export const stack_icon: Record<string, IconType> = {
-  react: FaReact,
-  next: SiNextdotjs,
-  tailwind: RiTailwindCssFill,
-  nestjs: SiNestjs,
-  django: SiDjango,
-  typescript: SiTypescript,
-  electronjs: SiElectron,
-  mysql: SiMysql,
-  postgre: SiPostgresql,
-  sqlite: SiSqlite,
-  bootstrap: SiBootstrap,
-  express: SiExpress,
+  Bootstrap,
+  Django,
+  Electron,
+  Express,
+  MySQL,
+  NestJS,
+  NextJS,
+  PostgreSQL,
+  React,
+  SQLite,
+  TailwindCSS,
+  TypeScript,
+} from "@/assets/svg";
+
+export const stack_icon: Record<string, string> = {
+  react: React,
+  next: NextJS,
+  tailwind: TailwindCSS,
+  nestjs: NestJS,
+  django: Django,
+  typescript: TypeScript,
+  electronjs: Electron,
+  mysql: MySQL,
+  postgre: PostgreSQL,
+  sqlite: SQLite,
+  bootstrap: Bootstrap,
+  express: Express,
 };
