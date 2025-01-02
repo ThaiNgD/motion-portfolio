@@ -26,6 +26,8 @@ export default {
   theme: {
     extend: {
       animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
@@ -33,14 +35,27 @@ export default {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
         shimmer: "shimmer 2s linear infinite",
+        translateYInfinite: "translateYInfinite 0.75s ease-in infinite",
       },
       keyframes: {
+        translateYInfinite: {
+          "0%": { transform: "translateY(-0.1rem)" },
+          "25%": { transform: "translateY(0)" }, // Adjust as needed
+          "50%": { transform: "translateY(0.1rem)" },
+          "75%": { transform: "translateY(0rem)" },
+          "100%": { transform: "translateY(-0.1rem)" },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",
           },
           to: {
             backgroundPosition: "-200% 0",
+          },
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
           },
         },
         spotlight: {
