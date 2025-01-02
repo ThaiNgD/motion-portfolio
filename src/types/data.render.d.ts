@@ -1,5 +1,6 @@
 export {};
 import { stack_icon } from "@/data";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 declare global {
   interface GridItem {
     title: string;
@@ -29,9 +30,15 @@ declare global {
     title: string;
     description?: string;
     url: string;
-    image?: string | StaticImport;
+    image: string | StaticImport;
     github?: string;
     gitlab?: string;
     stack: (keyof typeof stack_icon)[];
+  }
+
+  interface SocialItem {
+    id: number;
+    icon: string | StaticImport;
+    href: string;
   }
 }
