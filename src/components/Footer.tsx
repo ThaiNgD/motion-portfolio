@@ -1,5 +1,5 @@
 "use client";
-import FooterGrid from "@/assets/footer-grid.svg";
+import FooterGrid from "@/assets/svg/footer-grid.svg";
 import { social_data } from "@/data";
 import animateData from "@/data/sending-mail.json";
 import Lottie from "lottie-react";
