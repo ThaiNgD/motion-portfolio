@@ -1,0 +1,12 @@
+export { default as Bootstrap } from "./Bootstrap.svg";
+export { default as Django } from "./Django.svg";
+export { default as Electron } from "./Electron.svg";
+export { default as Express } from "./Express.svg";
+export { default as MySQL } from "./MySQL.svg";
+export { default as NestJS } from "./Nest.js.svg";
+export { default as NextJS } from "./Next.js.svg";
+export { default as PostgreSQL } from "./PostgresSQL.svg";
+export { default as React } from "./React.svg";
+export { default as SQLite } from "./SQLite.svg";
+export { default as TailwindCSS } from "./Tailwind_CSS.svg";
+export { default as TypeScript } from "./TypeScript.svg";

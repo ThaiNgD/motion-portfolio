@@ -1,5 +1,6 @@
 import { stack_icon } from "@/data";
 import Image from "next/image";
+import { FiArrowUpRight } from "react-icons/fi";
 import { PinContainer } from "./PinContainer";
 
 const PinProjects = ({
@@ -29,17 +30,22 @@ const PinProjects = ({
             alt={title}
             className="flex-auto m-auto h-[175px] w-full object-cover object-center"
           />
-          <div className="flex justify-between">
+          <div className="flex mt-2 items-center justify-between">
             <div className="flex gap-[2px]">
               {stack.map((item, index) => {
-                const TechIcon = stack_icon[item];
                 return (
                   <div className="p-2 rounded-full !h-fit bg-white" key={index}>
-                    <TechIcon size={16} className="text-black" />
+                    <Image
+                      height={20}
+                      width={20}
+                      src={stack_icon[item]}
+                      alt="icon"
+                    />
                   </div>
                 );
               })}
             </div>
+            <FiArrowUpRight size={16} />
           </div>
         </div>
       </PinContainer>
