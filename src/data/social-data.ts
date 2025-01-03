@@ -1,5 +1,5 @@
-import Facebook from "@/assets/Facebook.svg";
-import GitHub from "@/assets/GitHub.svg";
+import Facebook from "@/assets/svg/Facebook.svg";
+import GitHub from "@/assets/svg/GitHub.svg";
 export const social_data: SocialItem[] = [
   {
     id: 1,
