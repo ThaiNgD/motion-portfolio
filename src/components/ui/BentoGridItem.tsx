@@ -30,7 +30,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 dark:bg-[linear-gradient(45deg,_rgb(149,_92,_255)_0%,_rgb(163,_94,_253)_19%,_rgb(173,_96,_251)_27%,_rgb(181,_93,_248)_34%,_rgb(194,_95,_247)_41%,_rgb(203,_98,_244)_47%,_rgb(214,_113,_244)_53%,_rgb(222,_136,_246)_59%,_rgb(232,_160,_248)_66%,_rgb(240,_184,_250)_73%,_rgb(247,_208,_251)_81%,_rgb(254,_230,_252)_100%)] bg-[linear-gradient(90deg,_rgba(114,244,238,1)_0%,_rgba(59,194,231,1)_100%)] overflow-hidden",
+        "relative w-full row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 dark:bg-[linear-gradient(45deg,_rgb(149,_92,_255)_0%,_rgb(163,_94,_253)_19%,_rgb(173,_96,_251)_27%,_rgb(181,_93,_248)_34%,_rgb(194,_95,_247)_41%,_rgb(203,_98,_244)_47%,_rgb(214,_113,_244)_53%,_rgb(222,_136,_246)_59%,_rgb(232,_160,_248)_66%,_rgb(240,_184,_250)_73%,_rgb(247,_208,_251)_81%,_rgb(254,_230,_252)_100%)] bg-[linear-gradient(90deg,_rgba(114,244,238,1)_0%,_rgba(59,194,231,1)_100%)] overflow-hidden",
         className,
         id === 0 && "md:row-span-2 md:col-span-2"
       )}

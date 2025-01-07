@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import { Approach } from "@/components/Approach";
 import DarkLightMode from "@/components/DarkLightMode";
+import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
@@ -13,7 +14,10 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <main className="relative dark:bg-white bg-black" suppressHydrationWarning>
+    <main
+      className="relative overflow-x-hidden flex justify-center items-center flex-col mx-auto overflow-clip dark:bg-white bg-black"
+      suppressHydrationWarning
+    >
       {/* <ClockRealtime /> */}
       <NavbarFloating />
       <DarkLightMode />
@@ -22,26 +26,12 @@ export default function Home() {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
         <div className="flex min-h-screen h-fit flex-col items-center justify-center">
           <Hero />
-          <div className="z-[99] w-[80vw] flex-col inset-0 flex items-center justify-center gap-3 text-white font-bold px-4  text-3xl text-center md:text-4xl lg:text-7xl">
-            <div className="max-w-[89vw]">
-              <h2 className="uppercase tracking-widest text-[8px] md:text-xs  text-center text-dark dark:text-blue-100 max-w-[80vw]">
-                Hi, I&#39;m Dinh Thai Nguyen. Talented Frontend Developer
-                <span className="text-blue-500 dark:text-purple-400">
-                  (at least in my thought :)) )
-                </span>
-                , in my way to become Frontend Master
-              </h2>
-            </div>
+          <div className="z-[99] w-[60vw] flex-col inset-0 flex items-center justify-center gap-3 text-white font-bold px-4  text-3xl text-center md:text-4xl lg:text-7xl">
             <TextGenerateEffect
-              className="text-center"
-              words={"My Frontend Portfolio introducing me to the whole world "}
+              className="text-center whitespace-pre-line"
+              words={`Hi, I'm Dinh Thai Nguyen - talented Frontend Developer. In my way to become Frontend Master
+                `}
             />
-            <div className="max-w-[89vw]">
-              <h2 className="uppercase tracking-widest text-xs text-center text-dark dark:text-blue-100 max-w-[80vw]">
-                My recent projects showcasing my skills and experiences. &#9918;
-                &#9918; &#9918;
-              </h2>
-            </div>
             <Href
               content="Discover me"
               btnClassName="mt-4 z-[100]"
@@ -51,6 +41,7 @@ export default function Home() {
           </div>
         </div>
         <Grid />
+        <Experience />
         <RecentProjects />
         <AboutMe />
         <Testimonial />

@@ -43,7 +43,7 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16  px-20 md:flex-row flex-col justify-between items-center">
+      <div className="flex mt-16 gap-2 px-20 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base z-50 dark:text-white text-black text-sm md:font-normal font-light">
           Copyright © 2024 Dinh Thai Nguyen
         </p>
@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="flex z-50 items-center md:gap-3 gap-6">
           {social_data.map((profile) => (
             <Link key={profile.id} href={profile.href}>
-              <div className="w-10 h-10 cursor-pointer flex justify-center items-center bg-white backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border border-black-300">
+              <div className="w-10 h-10 cursor-pointer flex justify-center items-center bg-white  saturate-180  rounded-lg border border-black-300">
                 <Image src={profile.icon} alt="icons" width={20} height={20} />
               </div>
             </Link>
