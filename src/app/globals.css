@@ -7,6 +7,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,4 +22,86 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Clock css */
+
+.clock-day:before {
+  content: var(--timer-day);
+}
+
+.clock-hours:before {
+  content: var(--timer-hours);
+}
+
+.clock-minutes:before {
+  content: var(--timer-minutes);
+}
+
+.clock-seconds:before {
+  content: var(--timer-seconds);
+}
+
+.clock-container {
+  background-color: #080808;
+  border-radius: 5px;
+  padding: 30px 10px;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15),
+    0 15px 90px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+
+.clock-col {
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  min-width: 90px;
+  position: relative;
+}
+
+.clock-col:not(:last-child):before,
+.clock-col:not(:last-child):before {
+  top: 35%;
+}
+
+.clock-col:not(:last-child):after {
+  top: 50%;
+}
+
+.clock-timer:before {
+  color: #fff;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+}
+
+.clock-label {
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 825px) {
+  .clock-container {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .clock-col + .clock-col {
+    margin-top: 20px;
+  }
+
+  .clock-col:before,
+  .clock-col:after {
+    display: none !important;
+  }
+}
+
+.limit-three-lines {
+  display: -webkit-box; /* Create a flexible box */
+  -webkit-box-orient: vertical; /* Specify the box orientation as vertical */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  -webkit-line-clamp: 4; /* Limit to 3 lines */
 }
