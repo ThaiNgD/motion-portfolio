@@ -1,8 +1,21 @@
 "use client";
 import { tech_stack_data } from "@/data";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useState } from "react";
+import { FaRegCopy } from "react-icons/fa6";
 import Globe from "../Globe";
+import { BackgroundGradientAnimation } from "./GradientBackGround";
+import MagicButton from "./MagicButton";
+
+const Confetti = dynamic(
+  () => import("@/components/lottie/Confetti").then((m) => m.default),
+  {
+    ssr: false,
+  }
+);
+
 export const BentoGridItem = ({
   className,
   title,
@@ -15,16 +28,16 @@ export const BentoGridItem = ({
   titleClassName,
   imgClassName,
 }: GridItem & { id: number }) => {
-  // const [copied, setCopied] = useState(false);
-  // const handleCopyClick = () => {
-  //   navigator.clipboard.writeText("dinhthai1905@gmail.com");
-  //   setCopied(true);
-  //   setTimeout(() => setCopied(false), 1000);
-  // };
+  const [copied, setCopied] = useState(false);
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText("dinhthai1905@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000);
+  };
   return (
     <div
       className={cn(
-        "relative w-full row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 dark:bg-[linear-gradient(45deg,_rgb(149,_92,_255)_0%,_rgb(163,_94,_253)_19%,_rgb(173,_96,_251)_27%,_rgb(181,_93,_248)_34%,_rgb(194,_95,_247)_41%,_rgb(203,_98,_244)_47%,_rgb(214,_113,_244)_53%,_rgb(222,_136,_246)_59%,_rgb(232,_160,_248)_66%,_rgb(240,_184,_250)_73%,_rgb(247,_208,_251)_81%,_rgb(254,_230,_252)_100%)] bg-[linear-gradient(90deg,_rgba(114,244,238,1)_0%,_rgba(59,194,231,1)_100%)] overflow-hidden",
+        "relative  w-full row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 dark:bg-[linear-gradient(45deg,_rgb(149,_92,_255)_0%,_rgb(163,_94,_253)_19%,_rgb(173,_96,_251)_27%,_rgb(181,_93,_248)_34%,_rgb(194,_95,_247)_41%,_rgb(203,_98,_244)_47%,_rgb(214,_113,_244)_53%,_rgb(222,_136,_246)_59%,_rgb(232,_160,_248)_66%,_rgb(240,_184,_250)_73%,_rgb(247,_208,_251)_81%,_rgb(254,_230,_252)_100%)] bg-[linear-gradient(90deg,_rgba(114,244,238,1)_0%,_rgba(59,194,231,1)_100%)] overflow-hidden",
         className,
         id === 0 && "md:row-span-2 md:col-span-2"
       )}
@@ -57,26 +70,18 @@ export const BentoGridItem = ({
           />
         )}
       </div>
-      {/* {id === 3 && (
+      {id === 3 && (
         <BackgroundGradientAnimation containerClassName="flex items-center">
           <div className="mt-5" onClick={handleCopyClick}>
             <div className={cn("absolute z-50 bottom-5 right-10")}>
-              <Lottie
-                className="z-50 !w-[200px] translate-y-[75px] !h-[200px]"
-                loop={copied}
-                autoPlay={copied}
-                animationData={animateData}
-                rendererSettings={{
-                  preserveAspectRatio: "xMidYMid slice",
-                }}
-              />
+              <Confetti copied={copied} />
               <div className="relative flex justify-center">
                 <MagicButton content="My Email" icon={FaRegCopy} />
               </div>
             </div>
           </div>
         </BackgroundGradientAnimation>
-      )} */}
+      )}
       {id === 2 && (
         <div className="flex gap-1 lg:gap-5 group-hover/bento:translate-x-2 transition duration-200 w-fit absolute -right-3 lg:-right-2">
           <div className="grid-cols-2 grid gap-3 lg:gap-2">

@@ -1,7 +1,6 @@
 import { grid_items } from "@/data";
 import { BentoGrid } from "./ui/BentoGrid";
 import { BentoGridItem } from "./ui/BentoGridItem";
-
 const Grid = () => {
   return (
     <section id="contact" className="dark:bg-black h-fit bg-white">
