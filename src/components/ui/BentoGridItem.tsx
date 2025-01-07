@@ -1,14 +1,8 @@
 "use client";
 import { tech_stack_data } from "@/data";
-import animateData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
-import Lottie from "lottie-react";
 import Image from "next/image";
-import { useState } from "react";
-import { FaRegCopy } from "react-icons/fa6";
 import Globe from "../Globe";
-import { BackgroundGradientAnimation } from "./GradientBackGround";
-import MagicButton from "./MagicButton";
 export const BentoGridItem = ({
   className,
   title,
@@ -21,12 +15,12 @@ export const BentoGridItem = ({
   titleClassName,
   imgClassName,
 }: GridItem & { id: number }) => {
-  const [copied, setCopied] = useState(false);
-  const handleCopyClick = () => {
-    navigator.clipboard.writeText("dinhthai1905@gmail.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1000);
-  };
+  // const [copied, setCopied] = useState(false);
+  // const handleCopyClick = () => {
+  //   navigator.clipboard.writeText("dinhthai1905@gmail.com");
+  //   setCopied(true);
+  //   setTimeout(() => setCopied(false), 1000);
+  // };
   return (
     <div
       className={cn(
@@ -63,7 +57,7 @@ export const BentoGridItem = ({
           />
         )}
       </div>
-      {id === 3 && (
+      {/* {id === 3 && (
         <BackgroundGradientAnimation containerClassName="flex items-center">
           <div className="mt-5" onClick={handleCopyClick}>
             <div className={cn("absolute z-50 bottom-5 right-10")}>
@@ -82,7 +76,7 @@ export const BentoGridItem = ({
             </div>
           </div>
         </BackgroundGradientAnimation>
-      )}
+      )} */}
       {id === 2 && (
         <div className="flex gap-1 lg:gap-5 group-hover/bento:translate-x-2 transition duration-200 w-fit absolute -right-3 lg:-right-2">
           <div className="grid-cols-2 grid gap-3 lg:gap-2">
