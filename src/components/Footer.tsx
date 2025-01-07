@@ -1,12 +1,19 @@
 "use client";
 import FooterGrid from "@/assets/svg/footer-grid.svg";
 import { social_data } from "@/data";
-import animateData from "@/data/sending-mail.json";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
+
+const SendEmail = dynamic(
+  () => import("@/components/lottie/SendEmail").then((m) => m.default),
+  {
+    ssr: false,
+  }
+);
+
 const Footer = () => {
   return (
     <footer className="w-full mt-[300px] pt-20 pb-10" id="contact">
@@ -17,15 +24,7 @@ const Footer = () => {
           className="w-full h-full opacity-50"
         />
       </div>
-      <Lottie
-        className="z-50 absolute right-[calc(50%-200px)] bottom-[400px] !w-[400px] !h-[400px]"
-        loop={true}
-        autoPlay={true}
-        animationData={animateData}
-        rendererSettings={{
-          preserveAspectRatio: "xMidYMid slice",
-        }}
-      />
+      <SendEmail />
       <div className=" flex flex-col items-center">
         <h1 className="z-50 lg:max-w-[45vw] text-center dark:text-white text-black font-bold text-[40px] lg:text-6xl md:text-5xl">
           Ready to take <span className="text-purple">your</span> digital

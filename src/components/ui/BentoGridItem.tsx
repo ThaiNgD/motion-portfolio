@@ -1,14 +1,21 @@
 "use client";
 import { tech_stack_data } from "@/data";
-import animateData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import { FaRegCopy } from "react-icons/fa6";
 import Globe from "../Globe";
 import { BackgroundGradientAnimation } from "./GradientBackGround";
 import MagicButton from "./MagicButton";
+
+const Confetti = dynamic(
+  () => import("@/components/lottie/Confetti").then((m) => m.default),
+  {
+    ssr: false,
+  }
+);
+
 export const BentoGridItem = ({
   className,
   title,
@@ -67,15 +74,7 @@ export const BentoGridItem = ({
         <BackgroundGradientAnimation containerClassName="flex items-center">
           <div className="mt-5" onClick={handleCopyClick}>
             <div className={cn("absolute z-50 bottom-5 right-10")}>
-              <Lottie
-                className="z-50 !w-[200px] translate-y-[75px] !h-[200px]"
-                loop={copied}
-                autoPlay={copied}
-                animationData={animateData}
-                rendererSettings={{
-                  preserveAspectRatio: "xMidYMid slice",
-                }}
-              />
+              <Confetti copied={copied} />
               <div className="relative flex justify-center">
                 <MagicButton content="My Email" icon={FaRegCopy} />
               </div>

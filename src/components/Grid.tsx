@@ -1,12 +1,6 @@
 import { grid_items } from "@/data";
-import dynamic from "next/dynamic";
 import { BentoGrid } from "./ui/BentoGrid";
-
-const BentoGridItem = dynamic(
-  () => import("./ui/BentoGridItem").then((m) => m.BentoGridItem),
-  { ssr: false }
-);
-
+import { BentoGridItem } from "./ui/BentoGridItem";
 const Grid = () => {
   return (
     <section id="contact" className="dark:bg-black h-fit bg-white">
