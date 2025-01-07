@@ -1,6 +1,11 @@
 import { grid_items } from "@/data";
+import dynamic from "next/dynamic";
 import { BentoGrid } from "./ui/BentoGrid";
-import { BentoGridItem } from "./ui/BentoGridItem";
+
+const BentoGridItem = dynamic(
+  () => import("./ui/BentoGridItem").then((m) => m.BentoGridItem),
+  { ssr: false }
+);
 
 const Grid = () => {
   return (

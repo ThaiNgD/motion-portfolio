@@ -2,7 +2,6 @@ import AboutMe from "@/components/AboutMe";
 import { Approach } from "@/components/Approach";
 import DarkLightMode from "@/components/DarkLightMode";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import NavbarFloating from "@/components/NavbarFloating";
@@ -10,7 +9,15 @@ import RecentProjects from "@/components/RecentProjects";
 import Testimonial from "@/components/Testimonial";
 import Href from "@/components/ui/Href";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import dynamic from "next/dynamic";
 import { FaLocationArrow } from "react-icons/fa6";
+
+const Footer = dynamic(
+  () => import("@/components/Footer").then((m) => m.default),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
   return (
