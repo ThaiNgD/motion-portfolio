@@ -21,6 +21,14 @@ const Hero = () => {
           className="top-50 left-[calc(50vw)] h-[40vh] w-[2vw]"
           fill="blue"
         />
+        <Spotlight
+          className="top-28 left-[calc(80vw)] h-[60vh] w-[50vw]"
+          fill="white"
+        />
+        <Spotlight
+          className="top-28 left-[calc(80vw)] h-[60vh] w-[50vw]"
+          fill="blue"
+        />
       </div>
     </div>
   );
