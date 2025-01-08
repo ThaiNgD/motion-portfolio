@@ -1,9 +1,10 @@
 import { experience_data } from "@/data/experience-data";
+import Image from "next/image";
 import { Button } from "./ui/MovingBorderButton";
 
 const Experience = () => {
   return (
-    <div className="py-20" id="experience">
+    <div className="py-20 w-full px-5 lg:w-[850px]" id="experience">
       <h1 className="heading text-center dark:text-white text-black font-bold text-[40px] lg:text-6xl md:text-5xl">
         My {""}
         <span className="text-purple-400">Experience</span>
@@ -16,11 +17,42 @@ const Experience = () => {
               key={exp.id}
               borderRadius="1.75rem"
               duration={Math.floor(Math.random() * 10000 + 10000)}
-              className="flex-1 text-white border-neutral-200 dark:border-slate-800"
+              className="flex-1 flex-col text-white border-neutral-200 dark:border-slate-800"
             >
-              <div className="flex lg:flex-row lg:items-center p-3 md:p-5 py-6 lg:p-10 flex-col gap-2">
-                <h2 className="text-lg font-bold">{exp.company}</h2>
-                <p>{exp.position}</p>
+              <div className="flex w-full lg:flex-row justify-between lg:items-center p-3 md:p-5 py-6 lg:p-10 gap-2">
+                <div className="flex gap-3">
+                  <Image
+                    src={exp.logo}
+                    alt="Logo"
+                    height={50}
+                    width={50}
+                    className="rounded-full border"
+                  />
+                  <div className="flex justify-center items-start flex-col">
+                    <h2
+                      className="sm:text-lg text-base font-bold"
+                      style={{
+                        lineHeight: "22px",
+                      }}
+                    >
+                      {exp.company}
+                    </h2>
+                    <p className="italic">
+                      {exp.startDate} - {exp.endDate}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-center items-start flex-col">
+                  <h3
+                    className="sm:text-lg text-base font-bold"
+                    style={{
+                      lineHeight: "22px",
+                    }}
+                  >
+                    Position:
+                  </h3>
+                  <p className="italic">{exp.position}</p>
+                </div>
               </div>
             </Button>
           );
