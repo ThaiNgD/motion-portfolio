@@ -27,11 +27,11 @@ export const experience_data: JobExperience[] = [
   },
   {
     id: 3,
-    company: "TEKY",
+    company: "MKT Software",
     logo: MKT,
     position: "Junior Frontend Engineer",
     startDate: "2024-03",
-    endDate: "2024-01",
+    endDate: "2025-01",
     achievements: [
       "Built a sophisticated web application using ReactJS and NextJS",
       "Worked on various projects, including a deskstop app and a web application",
