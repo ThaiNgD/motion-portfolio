@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import { Approach } from "@/components/Approach";
 import DarkLightMode from "@/components/DarkLightMode";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
@@ -41,6 +42,7 @@ export default function Home() {
           </div>
         </div>
         <Grid />
+        <Education />
         <Experience />
         <RecentProjects />
         <AboutMe />

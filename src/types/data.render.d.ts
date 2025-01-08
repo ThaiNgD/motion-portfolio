@@ -50,4 +50,13 @@ declare global {
     endDate: string; // Format: YYYY-MM
     achievements: string[];
   }
+  interface EducationItem {
+    id: number;
+    company: string;
+    logo: string | StaticImageData; // Assuming MKT is a string representing the logo
+    specialized: string;
+    startDate: string; // Format: YYYY-MM
+    endDate: string; // Format: YYYY-MM
+    achievements: string[];
+  }
 }
