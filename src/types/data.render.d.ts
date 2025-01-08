@@ -41,4 +41,13 @@ declare global {
     icon: string | StaticImport;
     href: string;
   }
+  interface JobExperience {
+    id: number;
+    company: string;
+    logo: string | StaticImageData; // Assuming MKT is a string representing the logo
+    position: string;
+    startDate: string; // Format: YYYY-MM
+    endDate: string; // Format: YYYY-MM
+    achievements: string[];
+  }
 }

@@ -8,7 +8,7 @@ const RecentProjects = () => {
         A small selection of {""}
         <span className="text-purple-400">Recent Projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex h-fit w-fit flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {project_data.map((project, id) => {
           return (
             <PinProjects

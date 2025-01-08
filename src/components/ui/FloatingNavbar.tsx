@@ -1,4 +1,5 @@
 "use client";
+import Logo from "@/assets/logo-port-v2.png";
 import { cn } from "@/lib/utils";
 import {
   AnimatePresence,
@@ -6,10 +7,10 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import IconHolder from "../IconHolder";
-
 export const FloatingNav = ({
   navItems,
   className,
@@ -73,10 +74,9 @@ export const FloatingNav = ({
             </Link>
           );
         })}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button>
+        <Link href="#">
+          <Image src={Logo} alt="Logo" height={40} width={40} />
+        </Link>
       </motion.div>
     </AnimatePresence>
   );
