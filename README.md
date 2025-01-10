@@ -1,10 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+## Careful with version of package next-js and react-three/fiber
+# Check version dupplicated version when import, import dynamic
 ## Getting Started
 
 First, run the development server:
 
-## Careful with version of package next-js and react-three/fiber
+
 
 ```bash
 npm run dev
